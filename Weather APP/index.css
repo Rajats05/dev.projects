@@ -1,0 +1,11 @@
+
+
+.tab.current-tab{
+    background-color: rgb(229, 220, 220);
+    border-radius: 4px ;
+}
+
+.active{
+    opacity:1;
+    display: flex;
+}

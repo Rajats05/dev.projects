@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+    <title>PASSWORD GENERATOR</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <!--DISPLAY-SECTION-->
+        <div class="display-container">
+            <input  readonly placeholder="password" class="display" data-passworddisplay>
+            <button class="copybtn" data-copy>
+                <span class="copytxt" data-copymsg></span>
+                <img src="icon.png" alt="copy" width="23" height="23">
+            </button>
+        </div>
+        <!--INPUT-SECTION-->
+        <div class="input-container">
+            <!--PASSWORD LENGTH SECTION-->
+            <div class="length-container">
+                <p>Password Length</p>
+                <p data-length> 0 </p>
+            </div>
+            <!--SLIDER-->
+            <input type="range" min="1" max="20" class="slider" step="1" data-lengthslider >
+
+            <!--CHECKBOXES-->
+            
+            <div class="check">
+                <input type="checkbox" id="uppercase">
+                <label for="uppercase">Include Uppercase Letters</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="lowercase">
+                <label for="lowercase">Include Lowercase Letters</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="numbers">
+                <label for="numbers">Include Numbers</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="symbols">
+                <label for="symbols">Include Symbols</label>
+            </div>
+
+            <!--STRENGTH-SECTION-->
+            <div class="strength-container">
+                <p>Strength</p>
+                <div  class="indicator" data-indicator></div>
+            </div>
+            <!--PASSWORD_GENERATOR-SECTION-->
+            <div class="data-generator">
+                <button class="generate-button">GENERATE PASSWORD</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/dbdb1040f7.js" crossorigin="anonymous"></script>
+</body>
+</html>
