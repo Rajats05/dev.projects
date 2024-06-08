@@ -1,0 +1,92 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin:0;
+    padding :0;
+    font-family: 'Poppins','sans-serif';
+}
+
+.wrapper{
+    width:100vw;
+    height:100vh;
+    background-image:url("bg.jpg");
+    background-size:cover;
+    background-position: center;
+    display:grid;
+    place-items: center;
+
+}
+
+.game-info{
+    color:white;
+    position:absolute;               /* this helps to fix the position in the UI*/
+    top:3rem;                        /* this helps to fix position from top distance 3rem*/
+    left:50%;                        /* this helps to fix position from left distance 50% of the screen*/
+    transform: translateX(-50%);     /* this helps to move the content in -ve Y direction to 50% of content's size*/
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255,255,255,0.25);
+    padding:0.5rem 3rem;
+    text-align: center;
+}
+
+.tik-tak-toe{
+    width:70%;
+    max-width: 20rem;
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255,255,255,0.25);
+    padding:2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    aspect-ratio: 1/1;                        /*this helps set ratio like 1/1 means width/height ratio as 1/1 */
+}
+
+.box{
+    position:relative;       /* position":relative is used so that any element can be overlapped over the content*/
+    width:100%;
+    aspect-ratio: 1/1;
+    cursor:pointer;
+    font-size: 3rem;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*applying border to each box to create line */
+
+.box1,.box2,.box4,.box5{
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.box3,.box6{
+    border-bottom: 2px solid white;
+}
+
+.box7,.box8{
+    border-right: 2px solid white;
+}
+
+
+.btn{
+    color:white;
+    position: absolute;
+    bottom:3rem;
+    left:50%;
+    transform: translateX(-50%);
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255,255,255,0.25);
+    padding:0.5rem 2rem;
+    cursor:pointer;
+    display: none;
+}  
+
+.active{
+    display:flex;
+}
+
+.win{
+    background-color: rgba(0,255,0,0.3);
+}
