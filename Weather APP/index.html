@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
     <link rel="stylesheet" href="index.css"> 
+    
 </head>
 <body>
     
@@ -20,7 +25,7 @@
         <div class="weather-container">
 
             <!--Grant Location Conatiner-->
-            <div class="grant-location-container">
+            <div class="grant-location-container sub-container">
                 <img src="location.png" height="80" width="80" loading="lazy">
                 <p>Grant Location Access</p>
                 <p>Allow Access to get Weather Information</p>
@@ -36,13 +41,13 @@
             </form>
 
             <!--loading screen container-->
-            <div class="loading-container">
-                <img src="loadingGif.gif"  width="200" height="200">
+            <div class="loading-container sub-container">
+                <img src="loadingGif.gif"  width="150" height="150">
                 <p>loading</p>
             </div>
 
             <!--show weather info container-->
-            <div class="user-info-container">
+            <div class="user-info-container sub-container">
 
                 <!--city and flag-->
                 <div class="name">
@@ -53,16 +58,26 @@
                 <!--weather description-->
                 <p data-weatherDesc></p>
                 <!--weather Icon-->
-                <p data-weatherIcon></p>
+                <img data-weatherIcon>
                 <!--temperature-->
-                <p data-temp></p>
+                <div class="temp">
+                    <div>
+                        <p>Temperature</p>
+                        <p data-temp></p>
+                    </div>
+                    <div>
+                        <p>Feels Like</p>
+                        <p data-feelslike></p>
+                    </div>
+                </div>
+                
 
                 <!--3 cards parameters-->
 
                 <div class="parameter-container">
                     <!--card 1-->
                     <div class="parameter">
-                        <img src="wind.jpg" alt="">
+                        <img src="wind.png" alt="">
                         <p>windspeed</p>
                         <p data-windspeed></p>
                     </div>
@@ -70,19 +85,23 @@
                     <!--card 2-->
 
                     <div class="parameter">
-                        <img src="humidity.jpg" alt="">
+                        <img src="humidity.png" alt="">
                         <p>humidity</p>
                         <p data-humidity></p>
                     </div>
 
                     <!--card 3-->
                     <div class="parameter">
-                        <img src="cloud.jpg">
+                        <img src="cloud.png">
                         <p>cloud</p>
                         <p data-cloud></p>
                     </div>
                 </div>
             </div>
+            <!--<div class="error">
+                <img src="error.png" height="300px" width="300px">
+                <p>City not found</p>
+            </div> -->
 
         </div>
 
